@@ -200,6 +200,35 @@ a:focus-visible, button:focus-visible {
   gap: 48px;
 }
 
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 18px;
+  padding: 7px 14px 7px 11px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: var(--surface-2);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+.availability-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #5FD98A;
+  box-shadow: 0 0 0 3px rgba(95, 217, 138, 0.18);
+  flex-shrink: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .availability-dot { animation: pulseDot 2.4s ease-in-out infinite; }
+}
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(95, 217, 138, 0.18); }
+  50% { box-shadow: 0 0 0 6px rgba(95, 217, 138, 0.1); }
+}
+
 .hero-title {
   font-size: clamp(2.6rem, 5.4vw, 4.2rem);
   margin: 20px 0 24px;
@@ -482,6 +511,21 @@ a:focus-visible, button:focus-visible {
 .contact-section { border-bottom: none; }
 .contact-title { max-width: 720px; }
 .contact-lede { max-width: 560px; }
+.engagement-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+.engagement-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--gold);
+  background: var(--gold-soft);
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
 .contact-links {
   display: flex;
   flex-wrap: wrap;
