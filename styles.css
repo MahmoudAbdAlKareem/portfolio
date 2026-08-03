@@ -412,6 +412,27 @@ a:focus-visible, button:focus-visible {
 .tl-org { font-size: 0.85rem; color: var(--accent-ink); margin-bottom: 8px; }
 .tl-content p:last-child { max-width: 560px; margin-bottom: 0; }
 
+/* ===== Engagements ===== */
+.engagements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 8px;
+}
+.engagement-card {
+  padding: 30px 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface-2);
+  transition: border-color 0.25s var(--ease), transform 0.25s var(--ease), background 0.25s var(--ease);
+}
+.engagement-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+.engagement-card h3 { color: var(--ink); }
+.engagement-card p { font-size: 0.92rem; margin-bottom: 0; }
+@media (max-width: 700px) {
+  .engagements-grid { grid-template-columns: 1fr; }
+}
+
 /* ===== Impact ===== */
 .impact-grid {
   display: grid;
@@ -511,13 +532,27 @@ a:focus-visible, button:focus-visible {
 .contact-section { border-bottom: none; }
 .contact-title { max-width: 720px; }
 .contact-lede { max-width: 560px; }
-.engagement-tags {
+.engagement-tracks {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 22px;
+  gap: 32px;
+  margin-top: 30px;
 }
+.engagement-track {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.engagement-track-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.engagement-track .engagement-tag { margin-right: 8px; }
 .engagement-tag {
+  display: inline-block;
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--gold);

@@ -93,7 +93,7 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 })();
 
 /* ===== Scroll reveal ===== */
-const revealEls = document.querySelectorAll('.phil-card, .impact-card, .case-card, .foundation-row, .writing-row, .contact-link');
+const revealEls = document.querySelectorAll('.phil-card, .engagement-card, .impact-card, .case-card, .foundation-row, .writing-row, .contact-link');
 revealEls.forEach(el => el.classList.add('reveal'));
 
 const revealObserver = new IntersectionObserver((entries) => {
